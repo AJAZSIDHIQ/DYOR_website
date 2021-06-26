@@ -169,8 +169,8 @@ export const Styles = createGlobalStyle`
         margin-bottom: 5px;
         text-align: center;
         position: relative;
-        //opacity: 0;
-        //visibility: hidden;
+        opacity: 0;
+        visibility: hidden;
         transition: all 1s ease-in-out;
       }
       #timeline ul li > div p {
