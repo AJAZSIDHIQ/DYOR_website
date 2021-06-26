@@ -11,6 +11,8 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+const TimeLine = lazy(() => import("../../components/TimeLine"));
+
 
 const Home = () => {
   return (
@@ -55,6 +57,8 @@ const Home = () => {
         title={ContactContent.title}
         content={ContactContent.text}
         id="contact"
+      />
+      <TimeLine
       />
     </Container>
   );
