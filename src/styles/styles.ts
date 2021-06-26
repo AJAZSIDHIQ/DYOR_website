@@ -116,7 +116,7 @@ export const Styles = createGlobalStyle`
     :root {
         --backround-color: #011f4b;
         --primary-color: #6497b1;
-        --secondary-color: #fe7624;
+        --secondary-color: #f79f6a;
       }
       
       * {

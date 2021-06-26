@@ -1,30 +1,36 @@
+import React, { useEffect } from 'react';
+
 declare const window: any;
 
 const TimeLine = ( ) => {
 
-    const items  : NodeListOf<HTMLElement> = document.querySelectorAll("#timeline li");
-    const isInViewport = (el : HTMLElement) => {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <=
-            (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWhith || document.documentElement.clientWidth)
-        );
-    };
+    useEffect(() => {
 
-    const run = () =>
-        items.forEach((item) => {
-            if (isInViewport(item)) {
-                item.classList.add("show");
-            }
+        const items  : NodeListOf<HTMLElement> = document.querySelectorAll("#timeline li");
+        const isInViewport = (el : HTMLElement) => {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <=
+                (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWhith || document.documentElement.clientWidth)
+            );
+        };
+    
+        const run = () =>
+            items.forEach((item) => {
+                if (isInViewport(item)) {
+                    item.classList.add("show");
+                }
+        });
+    
+        // Events
+        window.addEventListener("load", run);
+         window.addEventListener("resize", run);
+         window.addEventListener("scroll", run);
     });
 
-    // Events
-    window.addEventListener("load", run);
-     window.addEventListener("resize", run);
-     window.addEventListener("scroll", run);
 
     return (
         <section id="timeline">
