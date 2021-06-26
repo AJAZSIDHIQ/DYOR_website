@@ -13,7 +13,6 @@ const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const TimeLine = lazy(() => import("../../components/TimeLine"));
 
-
 const Home = () => {
   return (
     <Container>
@@ -53,12 +52,12 @@ const Home = () => {
         icon="waving.svg"
         id="product"
       />
+      <TimeLine
+      />
       <Contact
         title={ContactContent.title}
         content={ContactContent.text}
         id="contact"
-      />
-      <TimeLine
       />
     </Container>
   );
