@@ -3,7 +3,7 @@ import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
 
-import i18n from "i18next";
+// import i18n from "i18next";
 import {
   FooterSection,
   Title,
@@ -13,12 +13,12 @@ import {
   Para,
   Large,
   Chat,
-  Empty,
+  // Empty,
   FooterContainer,
   Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
+  // Label,
+  // LanguageSwitch,
+  // LanguageSwitchContainer,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -27,9 +27,9 @@ interface SocialLinkProps {
 }
 
 const Footer = ({ t }: any) => {
-  const handleChange = (language: string) => {
-    i18n.changeLanguage(language);
-  };
+  // const handleChange = (language: string) => {
+  //   i18n.changeLanguage(language);
+  // };
 
   const SocialLink = ({ href, src }: SocialLinkProps) => {
     return (
@@ -56,11 +56,11 @@ const Footer = ({ t }: any) => {
               <Para>
                 {t(`Do you have any question? Feel free to reach out.`)}
               </Para>
-              <a href="mailto:l.qqbadze@gmail.com">
+              <a href="mailto:l.help@dyoresearch.tech">
                 <Chat>{t(`Let's Chat`)}</Chat>
               </a>
             </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
+            {/* <Col lg={8} md={8} sm={12} xs={12}>
               <Title>{t("Policy")}</Title>
               <Large to="/" left="true">
                 {t("Application Security")}
@@ -68,8 +68,8 @@ const Footer = ({ t }: any) => {
               <Large left="true" to="/">
                 {t("Software Principles")}
               </Large>
-            </Col>
-            <Col lg={6} md={6} sm={12} xs={12}>
+            </Col> */}
+            {/* <Col lg={6} md={6} sm={12} xs={12}>
               <Empty />
               <Large left="true" to="/">
                 {t("Support Center")}
@@ -77,31 +77,46 @@ const Footer = ({ t }: any) => {
               <Large left="true" to="/">
                 {t("Customer Support")}
               </Large>
+            </Col> */}
+            <Col lg={8} md={8} sm={12} xs={12}>
+              <Title>{t("Developers")}</Title>
+              <Large left="true" to="/">
+                {t("Documentation")}
+              </Large>
+              <Large left="true" to="/">
+                {t("Whitepaper")}
+              </Large>
+              <Large left="true" to="/">
+                {t("Github")}
+              </Large>
+            </Col>
+            <Col lg={6} md={6} sm={12} xs={12}>
+              <Title>{t("Community")}</Title>
+              <Large left="true" to="/">
+                {t("Blog")}
+              </Large>
+              <Large left="true" to="/">
+                {t("Announcements")}
+              </Large>
+              <Large left="true" to="/">
+                {t("Telegram")}
+              </Large>
+              <Large left="true" to="/">
+                {t("Reddit")}
+              </Large>
+              <Large left="true" to="/">
+                {t("Twitter")}
+              </Large>
             </Col>
           </Row>
-          <Row justify="space-between">
+          {/* <Row justify="space-between">
             <Col lg={10} md={10} sm={12} xs={12}>
               <Empty />
               <Language>{t("Address")}</Language>
               <Para>Rancho Santa Margarita</Para>
               <Para>2131 Elk Street</Para>
               <Para>California</Para>
-            </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
-              <Title>{t("Company")}</Title>
-              <Large left="true" to="/">
-                {t("About")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Blog")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Press")}
-              </Large>
-              <Large left="true" to="/">
-                {t("Careers & Culture")}
-              </Large>
-            </Col>
+            </Col> 
             <Col lg={6} md={6} sm={12} xs={12}>
               <Label htmlFor="select-lang">{t("Language")}</Label>
               <LanguageSwitchContainer>
@@ -123,7 +138,7 @@ const Footer = ({ t }: any) => {
                 </LanguageSwitch>
               </LanguageSwitchContainer>
             </Col>
-          </Row>
+          </Row> */}
         </Container>
       </FooterSection>
       <Extra>
@@ -145,25 +160,29 @@ const Footer = ({ t }: any) => {
             </NavLink>
             <FooterContainer>
               <SocialLink
+                href="https://t.me/dyor_channel"
+                src="telegram.svg"
+              />
+              {/* <SocialLink
                 href="https://github.com/Adrinlol/create-react-app-adrinlol"
                 src="github.svg"
-              />
+              /> */}
               <SocialLink
-                href="https://twitter.com/Adrinlolx"
+                href="https://twitter.com/d_y_o_research"
                 src="twitter.svg"
               />
               <SocialLink
-                href="https://www.linkedin.com/in/lasha-kakabadze/"
-                src="linkedin.svg"
-              />
-              <SocialLink
-                href="https://medium.com/@lashakakabadze/"
+                href="https://medium.com/@dyoresearch/"
                 src="medium.svg"
               />
-              <a href="https://www.buymeacoffee.com/adrinlol">
+              <SocialLink
+                href="https://reddit.com/r/dyoresearch/"
+                src="reddit.svg"
+              />
+              <a href="https://t.me/dyorairdrop_bot" target="_blank" rel="noopener noreferrer">
                 <img
-                  src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=adrinlol&button_colour=FF5F5F&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00"
-                  alt="Buy me a pizza"
+                  src=""
+                  alt="Join Airdrop"
                 />
               </a>
             </FooterContainer>

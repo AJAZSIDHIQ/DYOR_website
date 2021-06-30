@@ -5,12 +5,15 @@ import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
+import TimelineContent from "../../content/TimelineContent.json";
+
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+const TimeLine = lazy(() => import("../../components/TimeLine"));
 
 const Home = () => {
   return (
@@ -50,6 +53,9 @@ const Home = () => {
         content={ProductContent.text}
         icon="waving.svg"
         id="product"
+      />
+      <TimeLine
+        {...TimelineContent}
       />
       <Contact
         title={ContactContent.title}
